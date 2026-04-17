@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #e6f7f3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div.container{
+    background-color: #ffffff; 
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06); 
+}
+form#frmLogin{
+    border-radius: 15px;
+    padding: 30px 50px;
+    border: 1px solid #e0e0e0;
+    background-color: #fbfbfb; 
+    min-width: 600px;
+}
+h3#title{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #2a3130;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+div.form-group{
+    margin: 15px 0;
+    text-align: center;
+}
+div.form-group label{
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+    font-size: 18px;
+    color: #495057;
+}
+input[type="text"], 
+input[type="password"]{
+    width: 300px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e9ecef; 
+    outline: none;
+}
+input[type="text"]:focus,
+input[type="password"]:focus{
+    background-color: #fff;
+    border: 1px solid #4CAF50; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+input[type="submit"], 
+input[type="reset"]{
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+input[type="submit"]{
+    background: #4CAF50; 
+    color: white;
+}
+input[type="reset"]{
+    background: #cfcfcf; 
+}
+input[type="submit"]:hover{
+    background: #43a047;
+}
+input[type="reset"]:hover{
+    background: #b5b5b5;
+}

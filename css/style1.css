@@ -1,0 +1,135 @@
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+  background-color: #eef5f0; 
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+  color: white;
+  margin: 0;
+  padding: 25px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+h2 {
+  text-align: center;
+  margin: 15px 0;
+  color: #2e7d32; 
+  font-weight: bold;
+}
+.card, .section-box, .contact {
+  background: #fff;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 25px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.card:hover,
+.section-box:hover,
+.contact:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.card {
+  padding: 25px;
+}
+.section-box {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+.contact {
+  padding: 25px;
+}
+#table_info {
+  width: 100%;
+}
+#table_info td {
+  padding: 12px;
+  vertical-align: top;
+}
+#table_info img {
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+#intro {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#table_info2 {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#table_info2 th, #table_info2 td {
+  padding: 12px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+#table_info2 th {
+  background: linear-gradient(135deg, #4CAF50, #2e7d32); 
+  color: white;
+}
+#table_info2 tr:nth-child(even) {
+  background: #f8f9fa;
+}
+#table_info2 tr:hover {
+  background: #e8f5e9;
+}
+.section-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 25px auto;
+}
+.section-box:nth-child(1) { 
+  background: linear-gradient(to bottom, #f1f8e9, #e8f5e9);
+  border: 1px solid #c8e6c9;
+}
+.section-box:nth-child(2) { 
+  background: linear-gradient(to bottom, #fff7ed, #ffedd5);
+  border: 1px solid #fed7aa;
+}
+.section-box:nth-child(2) h3 {
+  color: #ea580c; 
+}
+.section-box h3 {
+  color: #2e7d32;
+  font-weight: bold;
+}
+.contact h3 {
+  color: #2e7d32;
+}
+.contact a {
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
+  color: #1b5e20;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+}
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+  }
+  #table_info {
+    display: block;
+    text-align: center;
+  }
+}

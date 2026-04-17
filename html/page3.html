@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Form Đăng Ký</title>
+		<link rel="stylesheet" href="../css/style3.css">
+	</head>
+	<body>
+		<div class="container">
+			<form>
+				<div class="left">
+					<input type="text" class="name" placeholder="Họ và tên">
+					<input type="text" class="mssv" placeholder="MSSV">
+					<div class="group">
+						<label>Lớp: </label>
+						<input type="radio" name="lop">DA24TTA<br>
+						<input type="radio" name="lop">DA24TTB<br>
+						<input type="radio" name="lop">DA24TTC<br>
+						<input type="radio" name="lop">DA24TTD<br>
+					</div>
+					Ngày sinh
+					<input type="date">
+					<input type="text" class="address" placeholder="Địa chỉ">
+					<div class="group">
+						<label>Giới tính:</label><br>
+						<input type="radio" name="gt">Nam
+						<input type="radio" name="gt">Nữ
+					</div>
+					<div class="group">
+						<label>Điểm mạnh:</label>
+						<input type="checkbox"> Học tốt
+                		<input type="checkbox"> Chăm chỉ
+                		<input type="checkbox"> Thể thao
+					</div>
+				</div>
+				<div class="right">
+					<textarea placeholder="Nhập mô tả thêm..."></textarea>
+		            <button type="submit">Gửi</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
