@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Tính học phí</title>
+		<link rel="stylesheet" href="../css/style6.css">
+	</head>
+	<body>
+		<div class="container">
+			<button type="button" onclick="add()">Thêm</button>
+			<div id="content"></div>
+		</div>
+		<script>
+			function add(){
+				const content = document.getElementById("content");
+				const myRow = document.createElement("div");
+				myRow.setAttribute("class", "row");
+				const inputMon = document.createElement("input");
+				inputMon.setAttribute("type", "text");
+				inputMon.setAttribute("placeholder", "Nhập môn");
+				inputMon.setAttribute("class", "input-mon");
+
+				const inputSTC = document.createElement("input");
+				inputSTC.setAttribute("type", "number");
+				inputSTC.setAttribute("placeholder", "Nhập STC");
+				inputSTC.setAttribute("class", "input-stc");
+
+				myRow.appendChild(inputMon);
+				myRow.appendChild(inputSTC);
+				content.appendChild(myRow);
+			}
+		</script>
+	</body>
+</html>

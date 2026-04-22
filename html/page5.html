@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Bảng cửu chương</title>
+		<link rel="stylesheet" href="../css/style5.css">
+	</head>
+	<body>
+		<form id="frmInBCC">
+			<h2>In bảng cửu chương</h2>
+			<label>Nhập số (2-9): </label>
+			<input type="number" min="2" max="9">
+			<button type="button" onclick="inBCC()">In</button>
+			<div id="kq">
+
+			</div>
+		</form>
+		<script>
+			function inBCC(){
+				const myForm = document.forms["frmInBCC"];
+				const myNumber = myForm.elements[0];
+				let num = parseInt(myNumber.value);
+				if(num < 2 || num > 9 || isNaN(num)){
+					alert("Vui lòng chỉ nhập số từ 2 đến 9!");
+					return;
+				}
+				let kq = "";
+				for(let i=1; i<=10; i++){
+					kq += num + "x" + i + "=" + (num*i) + "<br>";
+				}
+				document.getElementById("kq").innerHTML = kq;
+			}
+		</script>
+	</body>
+</html>
