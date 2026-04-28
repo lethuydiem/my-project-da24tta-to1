@@ -1,34 +1,85 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
-	<head>
-		<meta charset = "UTF-8">
-		<title>Tính học phí</title>
-		<link rel="stylesheet" href="../css/style6.css">
-	</head>
-	<body>
-		<div class="container">
-			<button type="button" onclick="add()">Thêm</button>
-			<div id="content"></div>
-		</div>
-		<script>
-			function add(){
-				const content = document.getElementById("content");
-				const myRow = document.createElement("div");
-				myRow.setAttribute("class", "row");
-				const inputMon = document.createElement("input");
-				inputMon.setAttribute("type", "text");
-				inputMon.setAttribute("placeholder", "Nhập môn");
-				inputMon.setAttribute("class", "input-mon");
+<head>
+  <meta charset="UTF-8">
+  <title>Tính học phí</title>
+  <link rel="stylesheet" href="../css/style6.css">
+</head>
+<body>
+  <div class="container">
+    <button type="button" onclick="add()">Thêm</button>
+    <button type="button" onclick="calculate()">Tính học phí</button>
+    <div id="content"></div>
+    <div id="result"></div>
+  </div>
 
-				const inputSTC = document.createElement("input");
-				inputSTC.setAttribute("type", "number");
-				inputSTC.setAttribute("placeholder", "Nhập STC");
-				inputSTC.setAttribute("class", "input-stc");
+  <script>
+    function add(){
+      const content = document.getElementById("content");
+      const myRow = document.createElement("div");
+      myRow.setAttribute("class", "row");
 
-				myRow.appendChild(inputMon);
-				myRow.appendChild(inputSTC);
-				content.appendChild(myRow);
-			}
-		</script>
-	</body>
+      const inputMon = document.createElement("input");
+      inputMon.setAttribute("type", "text");
+      inputMon.setAttribute("placeholder", "Nhập môn");
+      inputMon.setAttribute("class", "input-mon");
+
+      const inputSTC = document.createElement("input");
+      inputSTC.setAttribute("type", "number");
+      inputSTC.setAttribute("placeholder", "Nhập STC");
+      inputSTC.setAttribute("class", "input-stc");
+
+      const selectMon = document.createElement("select");
+      const option1 = document.createElement("option");
+      option1.value = "CS";
+      option1.text = "Cơ sở";
+      const option2 = document.createElement("option");
+      option2.value = "CN";
+      option2.text = "Chuyên ngành";
+
+      selectMon.appendChild(option1);
+      selectMon.appendChild(option2);
+
+      const btnDel = document.createElement("button");
+      btnDel.innerText = "Xóa";
+      btnDel.setAttribute("type", "button");
+      btnDel.setAttribute("class", "btn-del");
+      btnDel.onclick = function(){
+        content.removeChild(myRow);
+      }
+
+      myRow.appendChild(inputMon);
+      myRow.appendChild(inputSTC);
+      myRow.appendChild(selectMon);
+      myRow.appendChild(btnDel);
+      content.appendChild(myRow);
+    }
+
+    function calculate(){
+      const rows = document.querySelectorAll("#content .row");
+      let totalSTC = 0;
+      let tongHocPhi = 0;
+
+      for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const stcInput = row.querySelector(".input-stc");
+        const stc = parseInt(stcInput.value) || 0;
+        const selectMon = row.querySelector("select");
+        const loaiMon = selectMon.value;
+
+        totalSTC += stc;
+
+        if (loaiMon === "CS") {
+          tongHocPhi += stc * 500000; // môn cơ sở
+        } else if (loaiMon === "CN") {
+          tongHocPhi += stc * 640000; // môn chuyên ngành
+        }
+      }
+
+      document.getElementById("result").innerText =
+        "Tổng số tín chỉ: " + totalSTC +
+        " | Tổng học phí: " + tongHocPhi.toLocaleString("vi-VN") + " VND";
+    }
+  </script>
+</body>
 </html>
