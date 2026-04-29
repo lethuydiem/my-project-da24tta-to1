@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách sản phẩm</title>
+    <link rel="stylesheet" href="../css/style7.css">
+    <script src="../js/lib.js"></script>
+</head>
+<body>
+    <h2>Danh sách hoa</h2>
+    <div id="product-list"></div>
+
+    <script>
+        const products = [
+            { imageSrc: "../assets/images/hoa-hong-nhung.jpg", 
+            imageAlt: "Hoa hồng nhung đỏ", 
+            name: "Hoa hồng nhung Pháp", 
+            price: "250000/túi", 
+            linkHref: "#" },
+            { imageSrc: "../assets/images/hoa-cuc-trang.jpg", 
+            imageAlt: "Hoa cúc trắng", 
+            name: "Bó hoa cúc trắng tinh khiết", 
+            price: "40000đ", 
+            linkHref: "#" },
+            { imageSrc: "../assets/images/hoa-luu-ly.jpg", 
+            imageAlt: "Hoa lưu ly", 
+            name: "Hoa lưu ly", 
+            price: "120000đ", 
+            linkHref: "#" }
+        ];
+        products.forEach(p => {
+            addProduct(p.imageSrc, p.imageAlt, p.name, p.price, p.linkHref);
+        });
+    </script>
+</body>
+</html>
