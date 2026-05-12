@@ -2,35 +2,23 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Danh sách sản phẩm</title>
+    <title>Thiết kế trang hiển thị sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="../css/style7.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/lib.js"></script>
 </head>
 <body>
-    <h2>Danh sách hoa</h2>
-    <div id="product-list"></div>
+    <div class="container">
+        <div id="product-list" class="row">
+            </div>
+    </div>
 
     <script>
-        const products = [
-            { imageSrc: "../assets/images/hoa-hong-nhung.jpg", 
-            imageAlt: "Hoa hồng nhung đỏ", 
-            name: "Hoa hồng nhung Pháp", 
-            price: "250000/túi", 
-            linkHref: "#" },
-            { imageSrc: "../assets/images/hoa-cuc-trang.jpg", 
-            imageAlt: "Hoa cúc trắng", 
-            name: "Bó hoa cúc trắng tinh khiết", 
-            price: "40000đ", 
-            linkHref: "#" },
-            { imageSrc: "../assets/images/hoa-luu-ly.jpg", 
-            imageAlt: "Hoa lưu ly", 
-            name: "Hoa lưu ly", 
-            price: "120000đ", 
-            linkHref: "#" }
-        ];
-        products.forEach(p => {
-            addProduct(p.imageSrc, p.imageAlt, p.name, p.price, p.linkHref);
-        });
+        // Gọi hàm từ lib.js
+        loadAllProducts();
     </script>
 </body>
 </html>
